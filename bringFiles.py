@@ -1,5 +1,15 @@
 import sys
 import os
+import shutil
+
+def CreateDir(NDid: str):
+    try: 
+        os.mkdir(f"{os.getcwd()}/{NDid}Challenge{sys.argv[2]}")
+    except FileExistsError:
+        shutil.rmtree(f"{os.getcwd()}/{NDid}Challenge{sys.argv[2]}", ignore_errors=True)
+        os.mkdir(f"{os.getcwd()}/{NDid}Challenge{sys.argv[2]}")
+    os.system(f"cp -r {os.path.expanduser(f'~/esc-courses/sp23-cse-20312.01/dropbox/{NDid}/*{sys.argv[2]}')} {os.getcwd()}/{NDid}Challenge{sys.argv[2]}")
+    os.system(f"ls -al {os.path.expanduser(f'~/esc-courses/sp23-cse-20312.01/dropbox/{NDid}/*{sys.argv[2]}')} >> {os.getcwd()}/{NDid}Challenge{sys.argv[2]}/LSOUTPUTS.txt")
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
@@ -9,8 +19,7 @@ if __name__ == "__main__":
     try: 
         fp = open(sys.argv[1], "r")
         for NDid in fp.readlines():
-            os.system(f"cp -r {os.path.expanduser(f'~/esc-courses/sp23-cse-20312.01/dropbox/{NDid}/*{sys.argv[2]}')} {os.getcwd()}/{NDid}Challenge{sys.argv[2]}")
+            CreateDir(NDid.strip())
     except FileNotFoundError:
-        lowered_list = map(lambda x: x.lower(), sys.argv[1].split(","))
-        for NDid in lowered_list:
-            os.system(f"cp -r {os.path.expanduser(f'~/esc-courses/sp23-cse-20312.01/dropbox/{NDid}/*{sys.argv[2]}')} {os.getcwd()}/{NDid}Challenge{sys.argv[2]}")
+        for NDid in  map(lambda x: x.lower(), sys.argv[1].split(",")):
+            CreateDir(NDid.strip())
