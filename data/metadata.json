@@ -1,0 +1,15 @@
+{
+    "speedCopyData": {
+        "version": "0.2",
+        "pythonVersion": ">=3.7",
+        "author": "Jonathan Brockett"
+    },
+    "graderData": {
+        "cseNum": null,
+        "assignmentNum": 0,
+        "subdirectoriesInDropbox": null,
+        "subdirectoryPathInDropbox": null,
+        "currentNDIds": null,
+        "savedCourseNumbers": null
+    }
+}

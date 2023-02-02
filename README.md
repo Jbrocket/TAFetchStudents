@@ -10,9 +10,8 @@ that way it's separate from all the grading and whatnot.
 
 ## Usage:
 ```
-python3 <ScriptName> <ListofIds|TextFile> <CHALLENGE_NUMBER> <FLAGS>
+.work-env/main.py <import|edit|remove|compile|distribute> <OPTIONS>
 ```
-What this basically means is put in your list of NDId's you want to grade for this week, separated by commas **(NOT SPACES)**, into the program and **COPIES**  of your students' directories will be put into your current working directory for you to grade.
 
 ### FOR TEXT FILE USAGE
 You can just copy and paste the values from the spreadsheet into a txt file, essentially separate the names by a new line, and that'll also yield the same results as listing the ids.
@@ -41,5 +40,5 @@ cat LSOUTPUTS.txt
 ```
 within the directory to get the correct outputs for dates submitted
 
-## Flags
+## Options
 Not yet included :)
