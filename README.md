@@ -17,6 +17,19 @@ What this basically means is put in your list of NDId's you want to grade for th
 ### FOR TEXT FILE USAGE
 You can just copy and paste the values from the spreadsheet into a txt file, essentially separate the names by a new line, and that'll also yield the same results as listing the ids.
 
+example text file:
+```
+id1
+id2
+id3
+id3
+```
+
+example input:
+```
+python3 SCRIPT/bringFiles.py students.txt 1
+```
+
 ## IMPORTANT NOTICE:
 Since we are copying files, obviously
 ```
