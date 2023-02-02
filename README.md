@@ -17,5 +17,16 @@ What this basically means is put in your list of NDId's you want to grade for th
 ### FOR TEXT FILE USAGE
 You can just copy and paste the values from the spreadsheet into a txt file, essentially separate the names by a new line, and that'll also yield the same results as listing the ids.
 
+## IMPORTANT NOTICE:
+Since we are copying files, obviously
+```
+ls -al
+```
+won't work since we're creating new copies, so just 
+```
+cat LSOUTPUTS.txt
+```
+within the directory to get the correct outputs for dates submitted
+
 ## Flags
 Not yet included :)
